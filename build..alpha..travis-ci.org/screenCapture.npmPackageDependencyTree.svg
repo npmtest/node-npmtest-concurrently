@@ -13,7 +13,7 @@
 <tspan x="10" y="170">  │ ├── strip-ansi@0.3.0 </tspan>
 <tspan x="10" y="186">  │ └── supports-color@0.2.0 </tspan>
 <tspan x="10" y="202">  ├── commander@2.6.0 </tspan>
-<tspan x="10" y="218">  ├── date-fns@1.28.2 </tspan>
+<tspan x="10" y="218">  ├── date-fns@1.28.3 </tspan>
 <tspan x="10" y="234">  ├── lodash@4.17.4 </tspan>
 <tspan x="10" y="250">  ├── rx@2.3.24 </tspan>
 <tspan x="10" y="266">  ├── spawn-command@0.0.2-1 </tspan>

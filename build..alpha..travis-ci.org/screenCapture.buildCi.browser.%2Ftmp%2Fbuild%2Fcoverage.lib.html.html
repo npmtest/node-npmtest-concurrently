@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-concurrently/concurrently/src/main.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-concurrently/node_modules/concurrently/src/main.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-concurrently">npmtest-concurrently (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-concurrently/concurrently/src/main.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-concurrently/node_modules/concurrently/src/main.js</span></h1>
     <h2>
         
         Statements: <span class="metric">35.52% <small>(65 / 183)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-concurrently/concurrently/src/</a> &#187; main.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-concurrently/node_modules/concurrently/src/</a> » main.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -1146,8 +1144,8 @@ var config = {
 function main() {
     var firstBase = path.basename(process.argv[0]);
     var secondBase = path.basename(process.argv[1]);
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (firstBase === 'concurrent' || secondBase === 'concurrent') {
-<span class="cstat-no" title="statement not covered" >        console.error('Warning: "concurrent" command is deprecated, use "concurrently" instead.\n');</span>
+    <span class="missing-if-branch" title="if path not taken">I</span>if (firstBase === 'concurrent' || secondBase === 'concurrent') {
+<span class="cstat-no" title="statement not covered">        console.error('Warning: "concurrent" command is deprecated, use "concurrently" instead.\n');</span>
     }
 &nbsp;
     parseArgs();
@@ -1222,8 +1220,8 @@ function parseArgs() {
             config.prefixLength + '\n'
         );
 &nbsp;
-    program.on('--help', <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >        var help = [</span>
+    program.on('--help', <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">        var help = [</span>
             '  Examples:',
             '',
             '   - Kill other processes if one exits or dies',
@@ -1251,11 +1249,11 @@ function parseArgs() {
             '       $ concurrently --prefix "[{name}]" --names "HTTP,WATCH" -c "bgBlue.bold,bgMagenta.bold" "npm run watch" "http-server"',
             ''
         ];
-<span class="cstat-no" title="statement not covered" >        console.log(help.join('\n'));</span>
+<span class="cstat-no" title="statement not covered">        console.log(help.join('\n'));</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        var url = 'https://github.com/kimmobrunfeldt/concurrently';</span>
-<span class="cstat-no" title="statement not covered" >        console.log('  For more details, visit ' + url);</span>
-<span class="cstat-no" title="statement not covered" >        console.log('');</span>
+<span class="cstat-no" title="statement not covered">        var url = 'https://github.com/kimmobrunfeldt/concurrently';</span>
+<span class="cstat-no" title="statement not covered">        console.log('  For more details, visit ' + url);</span>
+<span class="cstat-no" title="statement not covered">        console.log('');</span>
     });
 &nbsp;
     program.parse(process.argv);
@@ -1266,12 +1264,12 @@ function mergeDefaultsWithArgs(config) {
     return _.merge(config, program);
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function stripCmdQuotes(cmd) {</span>
+<span class="fstat-no" title="function not covered">function stripCmdQuotes(cmd) {</span>
     // Removes the quotes surrounding a command.
-<span class="cstat-no" title="statement not covered" >    if (cmd[0] === '"' || cmd[0] === '\'') {</span>
-<span class="cstat-no" title="statement not covered" >        return cmd.substr(1, cmd.length - 2);</span>
+<span class="cstat-no" title="statement not covered">    if (cmd[0] === '"' || cmd[0] === '\'') {</span>
+<span class="cstat-no" title="statement not covered">        return cmd.substr(1, cmd.length - 2);</span>
     } else {
-<span class="cstat-no" title="statement not covered" >        return cmd;</span>
+<span class="cstat-no" title="statement not covered">        return cmd;</span>
     }
 }
 &nbsp;
@@ -1280,73 +1278,73 @@ function run(commands) {
     var lastPrefixColor = _.get(chalk, chalk.gray.dim);
     var prefixColors = config.prefixColors.split(',');
     var names = config.names.split(config.nameSeparator);
-    var children = _.map(commands, <span class="fstat-no" title="function not covered" >function(cmd, index) {</span>
+    var children = _.map(commands, <span class="fstat-no" title="function not covered">function(cmd, index) {</span>
         // Remove quotes.
-<span class="cstat-no" title="statement not covered" >        cmd = stripCmdQuotes(cmd);</span>
+<span class="cstat-no" title="statement not covered">        cmd = stripCmdQuotes(cmd);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        var spawnOpts = config.raw ? {stdio: 'inherit'} : {};</span>
-<span class="cstat-no" title="statement not covered" >        if (IS_WINDOWS) {</span>
-<span class="cstat-no" title="statement not covered" >            spawnOpts.detached = false;</span>
+<span class="cstat-no" title="statement not covered">        var spawnOpts = config.raw ? {stdio: 'inherit'} : {};</span>
+<span class="cstat-no" title="statement not covered">        if (IS_WINDOWS) {</span>
+<span class="cstat-no" title="statement not covered">            spawnOpts.detached = false;</span>
         }
-<span class="cstat-no" title="statement not covered" >        if (supportsColor) {</span>
-<span class="cstat-no" title="statement not covered" >          spawnOpts.env = Object.assign({FORCE_COLOR: supportsColor.level}, process.env)</span>
+<span class="cstat-no" title="statement not covered">        if (supportsColor) {</span>
+<span class="cstat-no" title="statement not covered">          spawnOpts.env = Object.assign({FORCE_COLOR: supportsColor.level}, process.env)</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        var child;</span>
-<span class="cstat-no" title="statement not covered" >        try {</span>
-<span class="cstat-no" title="statement not covered" >            child = spawn(cmd, spawnOpts);</span>
+<span class="cstat-no" title="statement not covered">        var child;</span>
+<span class="cstat-no" title="statement not covered">        try {</span>
+<span class="cstat-no" title="statement not covered">            child = spawn(cmd, spawnOpts);</span>
         } catch (e) {
-<span class="cstat-no" title="statement not covered" >            logError('', chalk.gray.dim, 'Error occured when executing command: ' + cmd);</span>
-<span class="cstat-no" title="statement not covered" >            logError('', chalk.gray.dim, e.stack);</span>
-<span class="cstat-no" title="statement not covered" >            process.exit(1);</span>
+<span class="cstat-no" title="statement not covered">            logError('', chalk.gray.dim, 'Error occured when executing command: ' + cmd);</span>
+<span class="cstat-no" title="statement not covered">            logError('', chalk.gray.dim, e.stack);</span>
+<span class="cstat-no" title="statement not covered">            process.exit(1);</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (index &lt; prefixColors.length) {</span>
-<span class="cstat-no" title="statement not covered" >            var prefixColorPath = prefixColors[index];</span>
-<span class="cstat-no" title="statement not covered" >            lastPrefixColor = _.get(chalk, prefixColorPath, chalk.gray.dim);</span>
+<span class="cstat-no" title="statement not covered">        if (index &lt; prefixColors.length) {</span>
+<span class="cstat-no" title="statement not covered">            var prefixColorPath = prefixColors[index];</span>
+<span class="cstat-no" title="statement not covered">            lastPrefixColor = _.get(chalk, prefixColorPath, chalk.gray.dim);</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        var name = index &lt; names.length ? names[index] : '';</span>
-<span class="cstat-no" title="statement not covered" >        childrenInfo[child.pid] = {</span>
+<span class="cstat-no" title="statement not covered">        var name = index &lt; names.length ? names[index] : '';</span>
+<span class="cstat-no" title="statement not covered">        childrenInfo[child.pid] = {</span>
             command: cmd,
             index: index,
             name: name,
             prefixColor: lastPrefixColor
         };
-<span class="cstat-no" title="statement not covered" >        return child;</span>
+<span class="cstat-no" title="statement not covered">        return child;</span>
     });
 &nbsp;
     // Transform all process events to rx streams
-    var streams = _.map(children, <span class="fstat-no" title="function not covered" >function(child) {</span>
-<span class="cstat-no" title="statement not covered" >        var childStreams = {</span>
+    var streams = _.map(children, <span class="fstat-no" title="function not covered">function(child) {</span>
+<span class="cstat-no" title="statement not covered">        var childStreams = {</span>
             error: Rx.Node.fromEvent(child, 'error'),
             close: Rx.Node.fromEvent(child, 'close')
         };
-<span class="cstat-no" title="statement not covered" >        if (!config.raw) {</span>
-<span class="cstat-no" title="statement not covered" >            childStreams.stdout = Rx.Node.fromReadableStream(child.stdout);</span>
-<span class="cstat-no" title="statement not covered" >            childStreams.stderr = Rx.Node.fromReadableStream(child.stderr);</span>
+<span class="cstat-no" title="statement not covered">        if (!config.raw) {</span>
+<span class="cstat-no" title="statement not covered">            childStreams.stdout = Rx.Node.fromReadableStream(child.stdout);</span>
+<span class="cstat-no" title="statement not covered">            childStreams.stderr = Rx.Node.fromReadableStream(child.stderr);</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        return _.reduce(childStreams, <span class="fstat-no" title="function not covered" >function(memo, stream, key) {</span></span>
-<span class="cstat-no" title="statement not covered" >            memo[key] = stream.map(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
-<span class="cstat-no" title="statement not covered" >                return {child: child, data: data};</span>
+<span class="cstat-no" title="statement not covered">        return _.reduce(childStreams, <span class="fstat-no" title="function not covered">function(memo, stream, key) {</span></span>
+<span class="cstat-no" title="statement not covered">            memo[key] = stream.map(<span class="fstat-no" title="function not covered">function(data) {</span></span>
+<span class="cstat-no" title="statement not covered">                return {child: child, data: data};</span>
             });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return memo;</span>
+<span class="cstat-no" title="statement not covered">            return memo;</span>
         }, {});
     });
 &nbsp;
     handleClose(streams, children, childrenInfo);
     handleError(streams, childrenInfo);
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (!config.raw) {
+    <span class="missing-if-branch" title="else path not taken">E</span>if (!config.raw) {
         handleOutput(streams, childrenInfo, 'stdout');
         handleOutput(streams, childrenInfo, 'stderr');
     }
 &nbsp;
     ['SIGINT', 'SIGTERM'].forEach(function(signal) {
-      process.on(signal, <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >        children.forEach(<span class="fstat-no" title="function not covered" >function(child) {</span></span>
-<span class="cstat-no" title="statement not covered" >          treeKill(child.pid, signal);</span>
+      process.on(signal, <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">        children.forEach(<span class="fstat-no" title="function not covered">function(child) {</span></span>
+<span class="cstat-no" title="statement not covered">          treeKill(child.pid, signal);</span>
         });
       });
     });
@@ -1356,10 +1354,10 @@ function handleOutput(streams, childrenInfo, source) {
     var sourceStreams = _.map(streams, source);
     var combinedSourceStream = Rx.Observable.merge.apply(this, sourceStreams);
 &nbsp;
-    combinedSourceStream.subscribe(<span class="fstat-no" title="function not covered" >function(event) {</span>
-<span class="cstat-no" title="statement not covered" >        var prefix = getPrefix(childrenInfo, event.child);</span>
-<span class="cstat-no" title="statement not covered" >        var prefixColor = childrenInfo[event.child.pid].prefixColor;</span>
-<span class="cstat-no" title="statement not covered" >        log(prefix, prefixColor, event.data.toString());</span>
+    combinedSourceStream.subscribe(<span class="fstat-no" title="function not covered">function(event) {</span>
+<span class="cstat-no" title="statement not covered">        var prefix = getPrefix(childrenInfo, event.child);</span>
+<span class="cstat-no" title="statement not covered">        var prefixColor = childrenInfo[event.child.pid].prefixColor;</span>
+<span class="cstat-no" title="statement not covered">        log(prefix, prefixColor, event.data.toString());</span>
     });
 }
 &nbsp;
@@ -1371,59 +1369,59 @@ function handleClose(streams, children, childrenInfo) {
     var othersKilled = false
 &nbsp;
     // TODO: Is it possible that amount of close events !== count of spawned?
-    closeStream.subscribe(<span class="fstat-no" title="function not covered" >function(event) {</span>
-<span class="cstat-no" title="statement not covered" >        var exitCode = event.data;</span>
-<span class="cstat-no" title="statement not covered" >        var nonSuccess = exitCode !== 0;</span>
-<span class="cstat-no" title="statement not covered" >        exitCodes.push(exitCode);</span>
+    closeStream.subscribe(<span class="fstat-no" title="function not covered">function(event) {</span>
+<span class="cstat-no" title="statement not covered">        var exitCode = event.data;</span>
+<span class="cstat-no" title="statement not covered">        var nonSuccess = exitCode !== 0;</span>
+<span class="cstat-no" title="statement not covered">        exitCodes.push(exitCode);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        var prefix = getPrefix(childrenInfo, event.child);</span>
-<span class="cstat-no" title="statement not covered" >        var prefixColor = childrenInfo[event.child.pid].prefixColor;</span>
-<span class="cstat-no" title="statement not covered" >        var command = childrenInfo[event.child.pid].command;</span>
-<span class="cstat-no" title="statement not covered" >        logEvent(prefix, prefixColor, command + ' exited with code ' + exitCode);</span>
+<span class="cstat-no" title="statement not covered">        var prefix = getPrefix(childrenInfo, event.child);</span>
+<span class="cstat-no" title="statement not covered">        var prefixColor = childrenInfo[event.child.pid].prefixColor;</span>
+<span class="cstat-no" title="statement not covered">        var command = childrenInfo[event.child.pid].command;</span>
+<span class="cstat-no" title="statement not covered">        logEvent(prefix, prefixColor, command + ' exited with code ' + exitCode);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        aliveChildren = _.filter(aliveChildren, <span class="fstat-no" title="function not covered" >function(child) {</span></span>
-<span class="cstat-no" title="statement not covered" >            return child.pid !== event.child.pid;</span>
+<span class="cstat-no" title="statement not covered">        aliveChildren = _.filter(aliveChildren, <span class="fstat-no" title="function not covered">function(child) {</span></span>
+<span class="cstat-no" title="statement not covered">            return child.pid !== event.child.pid;</span>
         });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (aliveChildren.length === 0) {</span>
-<span class="cstat-no" title="statement not covered" >            exit(exitCodes);</span>
+<span class="cstat-no" title="statement not covered">        if (aliveChildren.length === 0) {</span>
+<span class="cstat-no" title="statement not covered">            exit(exitCodes);</span>
         }
-<span class="cstat-no" title="statement not covered" >        if (!othersKilled) {</span>
-<span class="cstat-no" title="statement not covered" >          if (config.killOthers) {</span>
-<span class="cstat-no" title="statement not covered" >            killOtherProcesses(aliveChildren);</span>
-<span class="cstat-no" title="statement not covered" >            othersKilled = true;</span>
-          } else <span class="cstat-no" title="statement not covered" >if (config.killOthersOnFail &amp;&amp; nonSuccess) {</span>
-<span class="cstat-no" title="statement not covered" >            killOtherProcesses(aliveChildren);</span>
-<span class="cstat-no" title="statement not covered" >            othersKilled = true;</span>
+<span class="cstat-no" title="statement not covered">        if (!othersKilled) {</span>
+<span class="cstat-no" title="statement not covered">          if (config.killOthers) {</span>
+<span class="cstat-no" title="statement not covered">            killOtherProcesses(aliveChildren);</span>
+<span class="cstat-no" title="statement not covered">            othersKilled = true;</span>
+          } else <span class="cstat-no" title="statement not covered">if (config.killOthersOnFail &amp;&amp; nonSuccess) {</span>
+<span class="cstat-no" title="statement not covered">            killOtherProcesses(aliveChildren);</span>
+<span class="cstat-no" title="statement not covered">            othersKilled = true;</span>
           }
         }
     });
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function killOtherProcesses(processes) {</span>
-<span class="cstat-no" title="statement not covered" >    logEvent('--&gt; ', chalk.gray.dim, 'Sending SIGTERM to other processes..');</span>
+<span class="fstat-no" title="function not covered">function killOtherProcesses(processes) {</span>
+<span class="cstat-no" title="statement not covered">    logEvent('--&gt; ', chalk.gray.dim, 'Sending SIGTERM to other processes..');</span>
 &nbsp;
     // Send SIGTERM to alive children
-<span class="cstat-no" title="statement not covered" >    _.each(processes, <span class="fstat-no" title="function not covered" >function(child) {</span></span>
-<span class="cstat-no" title="statement not covered" >        treeKill(child.pid, 'SIGTERM');</span>
+<span class="cstat-no" title="statement not covered">    _.each(processes, <span class="fstat-no" title="function not covered">function(child) {</span></span>
+<span class="cstat-no" title="statement not covered">        treeKill(child.pid, 'SIGTERM');</span>
     });
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function exit(childExitCodes) {</span>
-<span class="cstat-no" title="statement not covered" >    var success;</span>
-<span class="cstat-no" title="statement not covered" >    switch (config.success) {</span>
+<span class="fstat-no" title="function not covered">function exit(childExitCodes) {</span>
+<span class="cstat-no" title="statement not covered">    var success;</span>
+<span class="cstat-no" title="statement not covered">    switch (config.success) {</span>
         case 'first':
-<span class="cstat-no" title="statement not covered" >            success = _.first(childExitCodes) === 0;</span>
-<span class="cstat-no" title="statement not covered" >            break;</span>
+<span class="cstat-no" title="statement not covered">            success = _.first(childExitCodes) === 0;</span>
+<span class="cstat-no" title="statement not covered">            break;</span>
         case 'last':
-<span class="cstat-no" title="statement not covered" >            success = _.last(childExitCodes) === 0;</span>
-<span class="cstat-no" title="statement not covered" >            break;</span>
+<span class="cstat-no" title="statement not covered">            success = _.last(childExitCodes) === 0;</span>
+<span class="cstat-no" title="statement not covered">            break;</span>
         default:
-<span class="cstat-no" title="statement not covered" >            success = _.every(childExitCodes, <span class="fstat-no" title="function not covered" >function(code) {</span></span>
-<span class="cstat-no" title="statement not covered" >                return code === 0;</span>
+<span class="cstat-no" title="statement not covered">            success = _.every(childExitCodes, <span class="fstat-no" title="function not covered">function(code) {</span></span>
+<span class="cstat-no" title="statement not covered">                return code === 0;</span>
             });
     }
-<span class="cstat-no" title="statement not covered" >    process.exit(success ? 0 : 1);</span>
+<span class="cstat-no" title="statement not covered">    process.exit(success ? 0 : 1);</span>
 }
 &nbsp;
 function handleError(streams, childrenInfo) {
@@ -1431,111 +1429,112 @@ function handleError(streams, childrenInfo) {
     var errorStreams = _.map(streams, 'error');
     var processErrorStream = Rx.Observable.merge.apply(this, errorStreams);
 &nbsp;
-    processErrorStream.subscribe(<span class="fstat-no" title="function not covered" >function(event) {</span>
-<span class="cstat-no" title="statement not covered" >        var command = childrenInfo[event.child.pid].command;</span>
-<span class="cstat-no" title="statement not covered" >        logError('', chalk.gray.dim, 'Error occured when executing command: ' + command);</span>
-<span class="cstat-no" title="statement not covered" >        logError('', chalk.gray.dim, event.data.stack);</span>
+    processErrorStream.subscribe(<span class="fstat-no" title="function not covered">function(event) {</span>
+<span class="cstat-no" title="statement not covered">        var command = childrenInfo[event.child.pid].command;</span>
+<span class="cstat-no" title="statement not covered">        logError('', chalk.gray.dim, 'Error occured when executing command: ' + command);</span>
+<span class="cstat-no" title="statement not covered">        logError('', chalk.gray.dim, event.data.stack);</span>
     });
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function colorText(text, color) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!config.color) {</span>
-<span class="cstat-no" title="statement not covered" >        return text;</span>
+<span class="fstat-no" title="function not covered">function colorText(text, color) {</span>
+<span class="cstat-no" title="statement not covered">    if (!config.color) {</span>
+<span class="cstat-no" title="statement not covered">        return text;</span>
     } else {
-<span class="cstat-no" title="statement not covered" >        return color(text);</span>
+<span class="cstat-no" title="statement not covered">        return color(text);</span>
     }
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function getPrefix(childrenInfo, child) {</span>
-<span class="cstat-no" title="statement not covered" >    var prefixes = getPrefixes(childrenInfo, child);</span>
-<span class="cstat-no" title="statement not covered" >    if (_.includes(_.keys(prefixes), config.prefix)) {</span>
-<span class="cstat-no" title="statement not covered" >        return '[' + prefixes[config.prefix] + '] ';</span>
+<span class="fstat-no" title="function not covered">function getPrefix(childrenInfo, child) {</span>
+<span class="cstat-no" title="statement not covered">    var prefixes = getPrefixes(childrenInfo, child);</span>
+<span class="cstat-no" title="statement not covered">    if (_.includes(_.keys(prefixes), config.prefix)) {</span>
+<span class="cstat-no" title="statement not covered">        return '[' + prefixes[config.prefix] + '] ';</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return _.reduce(prefixes, <span class="fstat-no" title="function not covered" >function(memo, val, key) {</span></span>
-<span class="cstat-no" title="statement not covered" >        var re = new RegExp('{' + key + '}', 'g');</span>
-<span class="cstat-no" title="statement not covered" >        return memo.replace(re, val);</span>
+<span class="cstat-no" title="statement not covered">    return _.reduce(prefixes, <span class="fstat-no" title="function not covered">function(memo, val, key) {</span></span>
+<span class="cstat-no" title="statement not covered">        var re = new RegExp('{' + key + '}', 'g');</span>
+<span class="cstat-no" title="statement not covered">        return memo.replace(re, val);</span>
     }, config.prefix) + ' ';
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function getPrefixes(childrenInfo, child) {</span>
-<span class="cstat-no" title="statement not covered" >    var prefixes = {};</span>
+<span class="fstat-no" title="function not covered">function getPrefixes(childrenInfo, child) {</span>
+<span class="cstat-no" title="statement not covered">    var prefixes = {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    prefixes.none = '';</span>
-<span class="cstat-no" title="statement not covered" >    prefixes.pid = child.pid;</span>
-<span class="cstat-no" title="statement not covered" >    prefixes.index = childrenInfo[child.pid].index;</span>
-<span class="cstat-no" title="statement not covered" >    prefixes.name = childrenInfo[child.pid].name;</span>
-<span class="cstat-no" title="statement not covered" >    prefixes.time = formatDate(Date.now(), config.timestampFormat);</span>
+<span class="cstat-no" title="statement not covered">    prefixes.none = '';</span>
+<span class="cstat-no" title="statement not covered">    prefixes.pid = child.pid;</span>
+<span class="cstat-no" title="statement not covered">    prefixes.index = childrenInfo[child.pid].index;</span>
+<span class="cstat-no" title="statement not covered">    prefixes.name = childrenInfo[child.pid].name;</span>
+<span class="cstat-no" title="statement not covered">    prefixes.time = formatDate(Date.now(), config.timestampFormat);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var command = childrenInfo[child.pid].command;</span>
-<span class="cstat-no" title="statement not covered" >    prefixes.command = shortenText(command, config.prefixLength);</span>
-<span class="cstat-no" title="statement not covered" >    return prefixes;</span>
+<span class="cstat-no" title="statement not covered">    var command = childrenInfo[child.pid].command;</span>
+<span class="cstat-no" title="statement not covered">    prefixes.command = shortenText(command, config.prefixLength);</span>
+<span class="cstat-no" title="statement not covered">    return prefixes;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function shortenText(text, length, cut) {</span>
-<span class="cstat-no" title="statement not covered" >    if (text.length &lt;= length) {</span>
-<span class="cstat-no" title="statement not covered" >        return text;</span>
+<span class="fstat-no" title="function not covered">function shortenText(text, length, cut) {</span>
+<span class="cstat-no" title="statement not covered">    if (text.length &lt;= length) {</span>
+<span class="cstat-no" title="statement not covered">        return text;</span>
     }
-<span class="cstat-no" title="statement not covered" >    cut = _.isString(cut) ? cut : '..';</span>
+<span class="cstat-no" title="statement not covered">    cut = _.isString(cut) ? cut :&nbsp;'..';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var endLength = Math.floor(length / 2);</span>
-<span class="cstat-no" title="statement not covered" >    var startLength = length - endLength;</span>
+<span class="cstat-no" title="statement not covered">    var endLength = Math.floor(length / 2);</span>
+<span class="cstat-no" title="statement not covered">    var startLength = length - endLength;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var first = text.substring(0, startLength);</span>
-<span class="cstat-no" title="statement not covered" >    var last = text.substring(text.length - endLength, text.length);</span>
-<span class="cstat-no" title="statement not covered" >    return first + cut + last;</span>
+<span class="cstat-no" title="statement not covered">    var first = text.substring(0, startLength);</span>
+<span class="cstat-no" title="statement not covered">    var last = text.substring(text.length - endLength, text.length);</span>
+<span class="cstat-no" title="statement not covered">    return first + cut + last;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function log(prefix, prefixColor, text) {</span>
-<span class="cstat-no" title="statement not covered" >    logWithPrefix(prefix, prefixColor, text);</span>
+<span class="fstat-no" title="function not covered">function log(prefix, prefixColor, text) {</span>
+<span class="cstat-no" title="statement not covered">    logWithPrefix(prefix, prefixColor, text);</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function logEvent(prefix, prefixColor, text) {</span>
-<span class="cstat-no" title="statement not covered" >    if (config.raw) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="fstat-no" title="function not covered">function logEvent(prefix, prefixColor, text) {</span>
+<span class="cstat-no" title="statement not covered">    if (config.raw) <span class="cstat-no" title="statement not covered">return;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    logWithPrefix(prefix, prefixColor, text, chalk.gray.dim);</span>
+<span class="cstat-no" title="statement not covered">    logWithPrefix(prefix, prefixColor, text, chalk.gray.dim);</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function logError(prefix, prefixColor, text) {</span>
+<span class="fstat-no" title="function not covered">function logError(prefix, prefixColor, text) {</span>
     // This is for now same as log, there might be separate colors for stderr
     // and stdout
-<span class="cstat-no" title="statement not covered" >    logWithPrefix(prefix, prefixColor, text, chalk.red.bold);</span>
+<span class="cstat-no" title="statement not covered">    logWithPrefix(prefix, prefixColor, text, chalk.red.bold);</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function logWithPrefix(prefix, prefixColor, text, color) {</span>
-<span class="cstat-no" title="statement not covered" >    var lastChar = text[text.length - 1];</span>
-<span class="cstat-no" title="statement not covered" >    if (config.raw) {</span>
-<span class="cstat-no" title="statement not covered" >        if (lastChar !== '\n') {</span>
-<span class="cstat-no" title="statement not covered" >            text += '\n';</span>
+<span class="fstat-no" title="function not covered">function logWithPrefix(prefix, prefixColor, text, color) {</span>
+<span class="cstat-no" title="statement not covered">    var lastChar = text[text.length - 1];</span>
+<span class="cstat-no" title="statement not covered">    if (config.raw) {</span>
+<span class="cstat-no" title="statement not covered">        if (lastChar !== '\n') {</span>
+<span class="cstat-no" title="statement not covered">            text += '\n';</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        process.stdout.write(text);</span>
-<span class="cstat-no" title="statement not covered" >        return;</span>
+<span class="cstat-no" title="statement not covered">        process.stdout.write(text);</span>
+<span class="cstat-no" title="statement not covered">        return;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (lastChar === '\n') {</span>
+<span class="cstat-no" title="statement not covered">    if (lastChar === '\n') {</span>
         // Remove extra newline from the end to prevent extra newlines in input
-<span class="cstat-no" title="statement not covered" >        text = text.slice(0, text.length - 1);</span>
+<span class="cstat-no" title="statement not covered">        text = text.slice(0, text.length - 1);</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var lines = text.split('\n');</span>
+<span class="cstat-no" title="statement not covered">    var lines = text.split('\n');</span>
     // Do not bgColor trailing space
-<span class="cstat-no" title="statement not covered" >    var coloredPrefix = colorText(prefix.replace(/ $/, ''), prefixColor) + ' ';</span>
-<span class="cstat-no" title="statement not covered" >    var paddedLines = _.map(lines, <span class="fstat-no" title="function not covered" >function(line, i) {</span></span>
-<span class="cstat-no" title="statement not covered" >        var coloredLine = color ? colorText(line, color) : line;</span>
-<span class="cstat-no" title="statement not covered" >        return coloredPrefix + coloredLine;</span>
+<span class="cstat-no" title="statement not covered">    var coloredPrefix = colorText(prefix.replace(/ $/, ''), prefixColor) + ' ';</span>
+<span class="cstat-no" title="statement not covered">    var paddedLines = _.map(lines, <span class="fstat-no" title="function not covered">function(line, i) {</span></span>
+<span class="cstat-no" title="statement not covered">        var coloredLine = color ? colorText(line, color) : line;</span>
+<span class="cstat-no" title="statement not covered">        return coloredPrefix + coloredLine;</span>
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    console.log(paddedLines.join('\n'));</span>
+<span class="cstat-no" title="statement not covered">    console.log(paddedLines.join('\n'));</span>
 }
 &nbsp;
 main();
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 08:19:47 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sun Apr 16 2017 08:29:37 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
