@@ -1,7 +1,7 @@
 # test coverage for  [concurrently (v3.4.0)](https://github.com/kimmobrunfeldt/concurrently)  [![npm package](https://img.shields.io/npm/v/npmtest-concurrently.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-concurrently) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-concurrently.svg)](https://travis-ci.org/npmtest/node-npmtest-concurrently)
 #### Run commands concurrently
 
-[![NPM](https://nodei.co/npm/concurrently.png?downloads=true)](https://www.npmjs.com/package/concurrently)
+[![NPM](https://nodei.co/npm/concurrently.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/concurrently)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-concurrently/tree/alpha)|
 |--:|:--|
@@ -9,11 +9,11 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-concurrently/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-concurrently/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-concurrently/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-concurrently/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-concurrently/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-concurrently/build/coverage.html/index.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-concurrently/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-concurrently/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-concurrently/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-concurrently%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-concurrently/build/test-report.html)
+[![test-report](https://npmtest.github.io/node-npmtest-concurrently/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-concurrently/build/test-report.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-concurrently/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-concurrently%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-concurrently/build/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-concurrently/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-concurrently/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-concurrently/build/screenCapture.npmPackageListing.svg)
 
@@ -79,17 +79,14 @@
     "main": "src/main.js",
     "maintainers": [
         {
-            "name": "gustavohenke",
-            "email": "guhenke@gmail.com"
+            "name": "gustavohenke"
         },
         {
-            "name": "kimmobrunfeldt",
-            "email": "kimmo.brunfeldt@gmail.com"
+            "name": "kimmobrunfeldt"
         }
     ],
     "name": "concurrently",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/kimmobrunfeldt/concurrently.git"
