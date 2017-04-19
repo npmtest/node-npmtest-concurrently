@@ -1,6 +1,6 @@
 # npmtest-concurrently
 
-#### test coverage for  [concurrently (v3.4.0)](https://github.com/kimmobrunfeldt/concurrently)  [![npm package](https://img.shields.io/npm/v/npmtest-concurrently.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-concurrently) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-concurrently.svg)](https://travis-ci.org/npmtest/node-npmtest-concurrently)
+#### basic test coverage for  [concurrently (v3.4.0)](https://github.com/kimmobrunfeldt/concurrently)  [![npm package](https://img.shields.io/npm/v/npmtest-concurrently.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-concurrently) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-concurrently.svg)](https://travis-ci.org/npmtest/node-npmtest-concurrently)
 
 #### Run commands concurrently
 
